@@ -5,10 +5,10 @@ COPY . /sample_app/
 WORKDIR /sample_app
 RUN pip install -r requirements.txt --no-cache-dir --compile
 
-# Run tests
-# WORKDIR /sample_app/tests
-# RUN pytest --junitxml=coverage2_junit.xml &&\
-#     pytest --cov=../src --cov-report xml
+Run tests
+WORKDIR /sample_app/tests
+RUN pytest --junitxml=coverage2_junit.xml &&\
+    pytest --cov=../src --cov-report xml
 
 WORKDIR /sample_app
 CMD ["bash"]

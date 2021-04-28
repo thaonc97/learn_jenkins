@@ -1,6 +1,3 @@
-import numpy as np
-import pandas as pd
-
 print("hey guys")
 
 def _sum(a, b): 
